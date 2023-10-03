@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<th:block th:fragment="headers">
+  <meta charset="UTF-8">
+  <title>Thaumaturge Forum</title>
+  <link rel="stylesheet" href="/fragments.css">
+</th:block>th:block>
+
+<div id="logo" th:fragment="logo">
+    <img src="/tclogo.png">
+</div>
+
+<div id="menu" th:fragment="menu">
+    <a class="button" href="/">Strona główna</a>
+    <a class="button" href="/contact">Kontakt</a>
+</div>
+
+<div id="sideLoginMenu" th:fragment="sidemenu">
+    Zalogowano jako: TODO <BR>
+    <input type="text" name="login" class="input" placeholder="Login"> <BR>
+    <input type="password" name="password" class="input" placeholder="Hasło"> <BR>
+    <input type="submit" value="Zaloguj" class="buttonLoginConfirm"> <BR>
+    <a href="/register" class="buttonRegister">Zarejestruj</a>
+</div>
+
+</body>
+
+</html>

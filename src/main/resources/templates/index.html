@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="~{fragments.html :: headers}"></th:block>
+    <link rel="stylesheet" href="/classic.css">
+</head>
+
+<body class="body">
+    <th:block th:replace="~{fragments.html :: logo}"></th:block>
+    <th:block th:replace="~{fragments.html :: menu}"></th:block>
+
+<div class="content">
+    <div class="topics">
+    <div th:each="post : ${posts}" class="theme">
+    <div th:text="${post.title}"></div>
+    <div th:each="entry : ${post.respondList}"><div th:text="${entry.message}"></div></div></div>
+    </div>
+    <div class="sideBanner"><th:block th:replace="~{fragments.html :: sidemenu}"></th:block></div>
+</div>
+
+
+</body>
+</html>

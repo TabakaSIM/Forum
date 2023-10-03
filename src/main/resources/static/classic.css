@@ -1,0 +1,41 @@
+.body {
+    /*border: 3px solid #fff;*/
+    background: black;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.content{
+    margin: 20px auto;
+    text-align: center;
+}
+
+.topics {
+    width: 70%;
+    float: left;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.sideBanner {
+    margin: 0 auto;
+    width: 25%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+}
+
+.split {
+    width: 45%;
+    float: left;
+    padding: 20px;
+}
+
+.theme {
+    border: 1px solid blue;
+}
+
+
+
+

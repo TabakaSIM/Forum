@@ -1,0 +1,28 @@
+#menu {
+        width: 100%;
+        text-align: center;
+}
+
+#logo {
+    width: 800px;
+    height: 200px;
+    margin: 15px auto;
+}
+
+#logo img {
+    width: 800px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+}
+
+#sideLoginMenu {
+    margin: 0 auto;
+    float: left;
+    /*padding: 20px;*/
+    border: 2px solid gray;
+    text-align: center;
+}
