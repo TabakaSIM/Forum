@@ -27,6 +27,10 @@ public class User {
         return DigestUtils.md5Hex(haslo).equals(this.password);
     }
 
+    public boolean matchLogin(String login) {
+        return this.login.equals(login);
+    }
+
     public enum Rola {
         ADMIN,
         USER
@@ -36,4 +40,6 @@ public class User {
     public String toString(){
         return this.email+this.login+this.password+(this.rola == Rola.USER);
     }
+
+    public boolean isAdmin(){return this.rola == Rola.ADMIN;}
 }

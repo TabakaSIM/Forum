@@ -15,7 +15,7 @@
     <div th:text="${post.title}"></div>
     <div th:each="entry : ${post.respondList}"><div th:text="${entry.message}"></div></div></div>
     </div>
-    <div class="sideBanner"><th:block th:replace="~{fragments.html :: sidemenu}"></th:block></div>
+    <div class="sideBanner"><th:block th:replace="~{loginFragment.html :: sidemenu}"></th:block></div>
 </div>
 
 

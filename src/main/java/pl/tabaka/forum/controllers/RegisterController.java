@@ -3,11 +3,10 @@ package pl.tabaka.forum.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import pl.tabaka.forum.models.User;
 import pl.tabaka.forum.service.IUserService;
 
 @Controller
-public class LoginRegisterController {
+public class RegisterController {
     @Autowired
     IUserService userService;
 
@@ -17,9 +16,7 @@ public class LoginRegisterController {
     }
 
     @RequestMapping(path = "/register", method = RequestMethod.POST)
-    public String register(@ModelAttribute User user, @RequestParam String password){
-        System.out.println(password);
-        System.out.println(user);
-        return("redirect:/register");
+    public String register(@RequestParam String email, @RequestParam String login, @RequestParam String password){
+        return userService.registerUser(email, login, password) ? "redirect:/" : "register";
     }
 }

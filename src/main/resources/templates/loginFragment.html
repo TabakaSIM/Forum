@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/loginSender.js"></script>
+</head>
+
+<body>
+
+<div id="sideLoginMenu" th:fragment="sidemenu">
+            <span th:if="${isLogged}">
+                Zalogowano jako: <BR>
+                <span th:text="${userLogin}"/>
+                <form method="post">
+                    <input type="submit" value="Wyloguj" class="buttonLogoutConfirm">
+                    <input type="hidden" name="login" value="NOT">
+                    <input type="hidden" name="password" value="SEEN?">
+                </form>
+            </span>
+            <span th:unless="${isLogged}">
+                NIE ZALOGOWANO <BR>
+                <form method="post">
+                    <input type="text" name="login" class="input" placeholder="Login"> <BR>
+                    <input type="password" name="password" class="input" placeholder="Hasło"> <BR>
+                    <input type="submit" value="Zaloguj" class="buttonLoginConfirm"> <BR>
+                    <a href="/register" class="buttonRegister">Zarejestruj</a>
+                </form>
+            </span>
+    <script>
+
+    </script>
+
+
+
+
+</div>
+
+</body>
+
+</html>
